@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit DOG</title>
+</head>
+<body>
+<form action="/dogs/<%=id%>" method= "POST">
+	<div>
+		<label for="name">Enter a name</label>
+		<input type="text" name="name" value="<%=dog.name%>"></input>
+		<label for="hairColor">Enter a color</label>
+		<input type="text" name="hairColor" value="<%=dog.hairColor%>"></input>
+		<button type="submit"> submit</button>
+	</div>
+</form>
+
+</body>
+</html>

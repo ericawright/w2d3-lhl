@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Dogs</title>
+</head>
+<body>
+<ul>
+	<% for (id in dogs) { %>
+		<li>
+			<h3> <%= dogs[id].name %> </h3>
+			<p> <%= dogs[id].hairColor %> </p>
+			<a href="/dogs/<%=id%>/edit">Edit dog</a>
+			<form method="POST" action="/dogs/<%=id%>/delete">
+			<button type="submit">DELETE</button>
+			</form>
+		</li>
+	<% }; %>
+
+</ul>
+
+<a href="/dogs/new" > create new dog </a>
+
+</body>
+</html>
